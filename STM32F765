@@ -1,0 +1,5 @@
+STM32F765芯片
+
+前言：在移植STM32F407芯片的代码到STM32F765芯片上时，发现STM32F765芯片没有FSMC只有FMC，而且因为FPGA硬件端仅支持FMC，所以得搞清楚FMC的详细信息才能在STM32CubeMX上进行配置。
+
+FMC的
