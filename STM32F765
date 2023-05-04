@@ -2,4 +2,15 @@ STM32F765芯片
 
 前言：在移植STM32F407芯片的代码到STM32F765芯片上时，发现STM32F765芯片没有FSMC只有FMC，而且因为FPGA硬件端仅支持FMC，所以得搞清楚FMC的详细信息才能在STM32CubeMX上进行配置。
 
-FMC的
+
+/*************************************************************************    FMC介绍    *****************************************************************/
+FMC的定义：FMC(Flexible Memory Controller)灵活存储控制器，STM32通过FMC与SRAM(Static memory Controller)静态存储控制器、
+                                                                      SDRAM(Synchronous Dynamic Random Access Memory)同步动态随机存储器、
+                                                                      ROM(Read-Only Memory)只读存储器、
+                                                                      PSRAM(Pseudo Static Random Access Memory)伪静态随机存储器、
+                                                                      Nor Flash、NandFlash存储器(这俩存储器没找到全称，先放放)
+                                                                      的引脚相连，从而进行数据的交换。            //写全简称方便理解记忆，嘿嘿
+FMC支持突发模式，可编程时钟，8bit、16bit、32bit的数据总线，拥有6个存储区域，每个区域支持256MB的寻址空间。
+
+
+//好像在线放不了图片，先转线下研究一下
